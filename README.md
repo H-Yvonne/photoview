@@ -58,8 +58,9 @@ Example
 <script type="text/javascript" src="../src/js/resetImgSize.js"></script>
 <script type="text/javascript" src="../src/js/rotate.js"></script>
 <script type="text/javascript" src="../src/js/photofigure.js"></script>
-注：内置了UMD加载方式，若使用模块加载只需引入photofigure.js文件
 ```
+注：内置了UMD加载方式，若使用模块加载只需引入photofigure.js文件
+
 实现图片查看
 ```
 <script type="text/javascript">
