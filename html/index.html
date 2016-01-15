@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>查看图片</title>
+        <link rel="stylesheet" href="../src/css/index.css">
+        <style>
+            .container { width: 580px; margin: 0 auto; }
+            .brief { width: 580px; }
+            .brief-list { overflow: hidden; zoom: 1; }
+            .brief-list .it { float: left; width: 100px; height: 100px; list-style: none; margin: 0 10px 10px 0; }
+            .it-img { display: block; width: 100px; height: 100px; overflow: hidden; } 
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="brief">
+                <ul class="brief-list">
+                    <li class="it">
+                        <a href="javascript:;" class="it-img" data-ind="0">
+                            <img src="../src/images/test1.jpg" height="100%" />
+                        </a>
+                    </li>
+                    <li class="it">
+                        <a href="javascript:;" class="it-img" data-ind="1">
+                            <img src="../src/images/test2.jpg" height="100%" />
+                        </a>
+                    </li>
+                    <li class="it">
+                        <a href="javascript:;" class="it-img" data-ind="2">
+                            <img src="../src/images/test3.jpg" height="100%" />
+                        </a>
+                    </li>
+                    <li class="it">
+                        <a href="javascript:;" class="it-img" data-ind="3">
+                            <img src="../src/images/test4.jpg" height="100%" />
+                        </a>
+                    </li>
+                    <li class="it">
+                        <a href="javascript:;" class="it-img" data-ind="4">
+                            <img src="../src/images/test5.jpg" height="100%" />
+                        </a>
+                    </li>
+                    <li class="it">
+                        <a href="javascript:;" class="it-img" data-ind="5">
+                            <img src="../src/images/test6.jpg" height="100%" />
+                        </a>
+                    </li>
+                    <li class="it">
+                        <a href="javascript:;" class="it-img" data-ind="6">
+                            <img src="../src/images/test7.jpg" height="100%" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="detail"></div>
+        </div>
+        <div class="container">
+            <div class="brief">
+                <ul class="brief-list">
+                    <li class="it">
+                        <a href="javascript:;" class="it-img" data-ind="0">
+                            <img src="../src/images/test7.jpg" height="100%" />
+                        </a>
+                    </li>
+                    <li class="it">
+                        <a href="javascript:;" class="it-img" data-ind="1">
+                            <img src="../src/images/test6.jpg" height="100%" />
+                        </a>
+                    </li>
+                    <li class="it">
+                        <a href="javascript:;" class="it-img" data-ind="2">
+                            <img src="../src/images/test5.jpg" height="100%" />
+                        </a>
+                    </li>
+                    <li class="it">
+                        <a href="javascript:;" class="it-img" data-ind="3">
+                            <img src="../src/images/test4.jpg" height="100%" />
+                        </a>
+                    </li>
+                    <li class="it">
+                        <a href="javascript:;" class="it-img" data-ind="4">
+                            <img src="../src/images/test3.jpg" height="100%" />
+                        </a>
+                    </li>
+                    <li class="it">
+                        <a href="javascript:;" class="it-img" data-ind="5">
+                            <img src="../src/images/test2.jpg" height="100%" />
+                        </a>
+                    </li>
+                    <li class="it">
+                        <a href="javascript:;" class="it-img" data-ind="6">
+                            <img src="../src/images/test1.jpg" height="100%" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="detail"></div>
+        </div>
+    </body>
+</html>
+<script type="text/javascript" src="../src/js/jquery.js"></script>
+<script type="text/javascript" src="../src/js/preOnloadImgSize.js"></script>
+<script type="text/javascript" src="../src/js/resetImgSize.js"></script>
+<script type="text/javascript" src="../src/js/rotate.js"></script>
+<script type="text/javascript" src="../src/js/photofigure.js"></script>
+<script type="text/javascript">
+    (function () {
+        $('a.it-img').on('click', function () {
+            var _wrap = $(this).parents('div.container'), ind = $(this).attr('data-ind') | 0;
+            var arr = [];
+            _wrap.find('a.it-img').each(function () {
+                var url = $(this).find('img').attr('src');
+                arr.push(url);
+            });
+            _wrap.find('div.brief').hide();
+            photoFigure({
+                mainwrap : _wrap.find('div.detail'),
+                imgData : arr,
+                briefwrap : _wrap.find('div.brief'),
+                index : ind
+            });
+        });
+    })();
+</script>

@@ -1,0 +1,43 @@
+.photo-figure-wrap { width: 580px; margin: 0 auto; }
+
+.photo-figure-icons { background: url(../images/photofigure-icons.png) no-repeat; }
+
+.photo-figure-showwrap { width: 580px; height: 580px; background-color: #f6f6f6; margin-bottom: 20px; position: relative; }
+
+.pf-img-wrap { display: block; width: 100%; height: 580px; overflow: hidden; }
+
+.pf-handle-wrap { width: 31px; height: 94px; padding: 3px 0; background: rgba(0, 0, 0, 0.5); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#50000000', endColorstr='#50000000'); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#50000000', endColorstr='#50000000')"; position: absolute; top: 0; right: 0; z-index: 1; }
+.pf-handle-wrap a { display: block; width: 31px; height: 24px; }
+.pf-handle-wrap .pf-handle-close { height: 22px; background-position: -6px -7px; }
+.pf-handle-wrap .pf-handle-enlarge { background-position: -6px -29px; }
+.pf-handle-wrap .pf-handle-lrotate { background-position: -6px -53px; }
+.pf-handle-wrap .pf-handle-rrotate { background-position: -6px -77px; }
+
+.pf-switch-btn { display: block; width: 49px; height: 49px; position: absolute; top: 262px; z-index: 1; display: none; }
+
+.pf-switch-lbtn { background-position: -67px -7px; left: 10px; }
+.pf-switch-lbtn:hover { background-position: -67px -75px; }
+
+.pf-switch-rbtn { background-position: -139px -7px; right: 10px; }
+.pf-switch-rbtn:hover { background-position: -139px -75px; }
+
+.photo-figure-gallwrap { width: 580px; height: 100px; overflow: hidden; zoom: 1; }
+
+.pf-gall-btn { display: block; float: left; width: 22px; height: 100px; background-color: #dedede; }
+.pf-gall-btn i { display: block; width: 10px; height: 17px; margin: 43px 0 0 6px; }
+
+.pf-gall-lbtn { margin-right: 8px; }
+.pf-gall-lbtn i { background-position: -218px -13px; }
+.pf-gall-lbtn:hover i { background-position: -218px -42px; }
+
+.pf-gall-rbtn i { background-position: -250px -13px; }
+.pf-gall-rbtn:hover i { background-position: -250px -42px; }
+
+.pf-gall-wrap { float: left; width: 520px; overflow: hidden; margin-right: 8px; }
+
+.pf-gall-list { width: 10000px; overflow: hidden; zoom: 1; margin: 0; padding: 0; }
+.pf-gall-list .item { float: left; width: 100px; height: 100px; padding: 0 2px; list-style: none; }
+.pf-gall-list .pf-gall-item { width: 100px; height: 100px; position: relative; }
+.pf-gall-list .pf-gall-img { display: block; width: 100px; height: 100px; overflow: hidden; }
+.pf-gall-list .pf-gall-line { display: block; width: 94px; height: 94px; border: 3px solid #00ccbb; position: absolute; top: 0; left: 0; display: none; }
+.pf-gall-list .item-active .pf-gall-line { display: block; }
